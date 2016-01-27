@@ -1,6 +1,6 @@
 {
   "name": "@nxus/rest-api",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "description": "REST API for Nxus applications",
   "main": "lib/index.js",
   "scripts": {
