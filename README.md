@@ -1,3 +1,3 @@
-# @nxus/rest-api
+# Nxus Rest API
 
-REST API for `@nxus/storage` models.
+Exposes Nxus Storage models as a REST API.
