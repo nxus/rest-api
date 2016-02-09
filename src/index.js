@@ -9,23 +9,21 @@ export default class RestAPI {
   
   constructor(app) {
     this.app = app
-    this.config = Object.assign(_defaultConfig, app.config.storage)
+    this.config = Object.assign(_defaultConfig, app.config.restapi)
     
     var router = app.get('router')
     var url = this.config.url_path+'/:model';
     var url_instance = this.config.url_path+'/:model/:id';
 
-    router.provide('route', 'GET', url, this._list.bind(this))
-    router.provide('route', 'POST', url, this._post.bind(this))
-    router.provide('route', 'GET', url_instance, this._get.bind(this))
-    router.provide('route', 'PUT', url_instance, this._put.bind(this))
-    router.provide('route', 'DELETE', url_instance, this._delete.bind(this))
+    router.route('GET', url, this._list.bind(this))
+    router.route('POST', url, this._post.bind(this))
+    router.route('GET', url_instance, this._get.bind(this))
+    router.route('PUT', url_instance, this._put.bind(this))
+    router.route('DELETE', url_instance, this._delete.bind(this))
   }
   
   getModel (modelName) {
-    return this.app.get('storage').request('getModel', modelName).then((model) => {
-      return model
-    });
+    return this.app.get('storage').getModel(modelName)
   }
   
 
