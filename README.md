@@ -1,8 +1,18 @@
 # Nxus Rest API
 
+[![Build Status](https://travis-ci.org/nxus/rest-api.svg?branch=master)](https://travis-ci.org/nxus/rest-api)
+
 Exposes Nxus Storage models as a REST API.
 
-# Configuration
+## Installation
+
+In your Nxus application:
+
+    > npm install @nxus/rest-api --save
+
+## Usage
+
+### Configuration
 
 In package.json:
 ```
@@ -13,3 +23,12 @@ In package.json:
  }
 ```
 
+### Routes
+
+```
+GET /api/:model
+POST /api/:model
+GET /api/:model/:id
+PUT /api/:model/:id
+DELETE /api/:model/:id
+```

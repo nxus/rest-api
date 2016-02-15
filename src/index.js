@@ -5,6 +5,16 @@ const _defaultConfig = {
   // TODO Need allowedModels whitelist
 }
 
+/**
+ * Exposes a REST API for Nxus models
+ * e.g. GET /api/todo, POST /api/todo, GET /api/todo/1, etc
+ * @example Configuration (defaults):
+ * {restapi: {
+ *   url_path: '/api'
+ * }}
+ */
+
+
 export default class RestAPI {
   
   constructor(app) {
