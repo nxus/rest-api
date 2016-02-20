@@ -1,13 +1,34 @@
+
+/**
+ * Exposes Nxus Storage models as a REST API.
+ * 
+ * # Configuration
+ * 
+ * In package.json:
+ * ```
+ *  "config": {
+ *    "restapi": {
+ *      "url_path": "/api"
+ *     }
+ *  }
+ * ```
+ * # API
+ * ----
+ */
+
 'use strict';
 
-const _defaultConfig = {
-  url_path: '/api'
-  // TODO Need allowedModels whitelist
-}
-
+/**
+ * The REST API Base Class
+ */
 export default class RestAPI {
   
   constructor(app) {
+    const _defaultConfig = {
+      url_path: '/api'
+      // TODO Need allowedModels whitelist
+    }
+
     this.app = app
     this.config = Object.assign(_defaultConfig, app.config.restapi)
     
