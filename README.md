@@ -2,9 +2,19 @@
 
 ## 
 
+[![Build Status](https://travis-ci.org/nxus/rest-api.svg?branch=master)](https://travis-ci.org/nxus/rest-api)
+
 Exposes Nxus Storage models as a REST API.
 
-## Configuration
+### Installation
+
+In your Nxus application:
+
+    > npm install @nxus/rest-api --save
+
+### Usage
+
+#### Configuration
 
 In package.json:
 
@@ -13,6 +23,15 @@ In package.json:
          "url_path": "/api"
         }
      }
+     
+
+#### Routes
+
+    GET /api/:model
+    POST /api/:model
+    GET /api/:model/:id
+    PUT /api/:model/:id
+    DELETE /api/:model/:id
 
 ## API
 
@@ -20,4 +39,14 @@ In package.json:
 
 ## RestAPI
 
-The REST API Base Class
+Exposes a REST API for Nxus models
+e.g. GET /api/todo, POST /api/todo, GET /api/todo/1, etc
+
+**Examples**
+
+```javascript
+Configuration (defaults):
+{restapi: {
+  url_path: '/api'
+}}
+```
