@@ -1,4 +1,4 @@
-# @nxus/rest-api
+# nxus-rest-api
 
 ## 
 

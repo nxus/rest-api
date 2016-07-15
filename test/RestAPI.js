@@ -2,7 +2,7 @@
 
 import RestAPI from '../src/index'
 
-import TestApp from '@nxus/core/lib/test/support/TestApp';
+import TestApp from 'nxus-core/lib/test/support/TestApp';
 
 describe("RestAPI", () => {
   var module;
