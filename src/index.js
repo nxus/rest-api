@@ -73,7 +73,7 @@ export default class RestAPI {
   
 
   _list (req, res) {
-    var query = req.params.query || {};
+    var query = req.param('query') || {};
     this.getModel(req.params.model).then((model) => {
       model.find().where(query).then((results) => {
         res.send(results);
