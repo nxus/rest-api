@@ -1,6 +1,6 @@
 {
   "name": "nxus-rest-api",
-  "version": "3.0.0-0",
+  "version": "3.0.0",
   "description": "REST API for Nxus applications",
   "main": "lib",
   "scripts": {
@@ -27,8 +27,7 @@
     "url": "https://github.com/nxus/rest-api/issues"
   },
   "homepage": "https://github.com/nxus/rest-api",
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
     "nxus-core": "^3.0.0",
     "nxus-router": "^3.0.0",
